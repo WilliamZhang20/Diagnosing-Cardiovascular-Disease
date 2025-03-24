@@ -14,11 +14,11 @@
 
 ## Introduction
 
-This project implements & compares 3 tree-based machine learning models to predict the likelihood of cardiovascular disease. This enables earlier detection, so action can be taken to potentially save lives!
+This project implements & compares 3 tree-based machine learning models to determine whether or not a patient has heart disease. This enables earlier detection, so action can be taken to potentially save lives!
 
 Those models are: decision tree, random forest, and gradient boosting.
 
-They learn from health data on a large set of patients, and predict disease likelihood from the same health metrics on any new person.
+They learn from health data on a large set of patients, and diagnose the disease from the same health metrics on any new person.
 
 ## Required Libraries
 
