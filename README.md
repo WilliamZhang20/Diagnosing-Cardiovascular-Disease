@@ -85,7 +85,7 @@ A next step would be to use Sklearn's GridSearchCV to refit better models.
 
 The gradient boosting [algorithm](https://xgboost.readthedocs.io/en/stable/tutorials/model.html) makes an additional improvement over Random Forest. It improves the strength of the model by making newer trees correct the error of past trees.
 
-As with all supervised learning algorithms, it will optimize to minimize an objective function $$\mathcal{J}$$ of the prediction w.r.t. the target. The generic function with a typical a logistic loss & regularization term is:
+As with all supervised learning algorithms, it will optimize to minimize an objective function $$\mathcal{J}$$ of the prediction w.r.t. the target. The generic function with a typical logistic loss & regularization term is:
 
 $$\mathcal{J} = \sum_{i=1}^{N} \mathcal{L}(y_i, \hat{y_i}) + \sum_{k=1}^{K} \Omega (f_k)$$
 
@@ -109,13 +109,13 @@ Fitting new trees to the loss will go as: $${w_j}^* = - \frac{G_j}{H_j + \lambda
 
 **The Implementation**
 
-Using the very powerful **XGBoost** library, we call `XGBClassifier` with controls over a parameter called `early_stopping_rounds`, the number of iterations to continue training since the last accuracy improvement. 
+Using the very powerful **XGBoost** library to implement the algorithm, we call `XGBClassifier` with controls over a parameter called `early_stopping_rounds`, the number of iterations to continue training since the last accuracy improvement. 
 
 By fitting only 26 estimator trees, over 16 training rounds, we have obtained the best accuracy possible, which is 92.5% on training set, and 86.4% on test set. Clearly very efficient!
 
 ## Conclusion
 
-Random Forest & XGBoost had similar accuracy results with little overfitting for both, and XGBoost being more sample & computationally efficient.
+Random Forest & Gradient Boosting had similar accuracy results with little overfitting for both, and Gradient Boosting being more sample & computationally efficient.
 
 ## Credits
 
